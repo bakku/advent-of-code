@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>aof_2023</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="input\day01_part01.txt" />
+    <Content Include="input\day01_part02.txt" />
+    <Content Include="input\day02_part01.txt" />
+    <Content Include="input\day02_part02.txt" />
+    <Compile Include="Day01.fs" />
+    <Compile Include="Day02.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>
