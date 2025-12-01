@@ -1,0 +1,26 @@
+[project]
+name = "aopy-2025"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "Christian Paling", email = "christian.paling@googlemail.com" }
+]
+requires-python = ">=3.14.0"
+dependencies = []
+
+[project.scripts]
+aopy-2025 = "aopy_2025:main"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.19.0",
+    "ruff>=0.14.7",
+]
+
+[tool.mypy]
+strict = true
+mypy_path = "src"
+
+[tool.ruff]
+lint.select = ["E", "F", "I"]
