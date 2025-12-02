@@ -1,7 +1,12 @@
 import sys
 
 from aopy_2025.day01 import day01
+from aopy_2025.day02 import day02
 
+DAYS = {
+    1: day01,
+    2: day02
+}
 
 def main() -> None:
     if len(sys.argv) < 2:
@@ -10,5 +15,8 @@ def main() -> None:
 
     day = int(sys.argv[1])
 
-    if day == 1:
-        day01()
+    if day not in DAYS:
+        print(f"day {day} was not implemented yet")
+        sys.exit(-1)
+
+    DAYS[day]()

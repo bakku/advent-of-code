@@ -12,6 +12,10 @@ dependencies = []
 [project.scripts]
 aopy-2025 = "aopy_2025:main"
 
+[build-system]
+requires = ["uv_build>=0.9.14,<0.10.0"]
+build-backend = "uv_build"
+
 [dependency-groups]
 dev = [
     "mypy>=1.19.0",

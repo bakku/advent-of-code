@@ -7,3 +7,7 @@ def get_puzzle_input(day: int) -> str:
     )
 
     return path.read_text()
+
+
+def flatten[T](lst: list[list[T]]) -> list[T]:
+    return sum(lst, [])

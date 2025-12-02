@@ -10,7 +10,7 @@ class Rotation(TypedDict):
     amount: int
 
 
-def _parse_puzzle_input0101(puzzle_input: str) -> list[Rotation]:
+def _parse_puzzle_input01(puzzle_input: str) -> list[Rotation]:
     return [
         {"direction": "left" if line[0] == "L" else "right", "amount": int(line[1:])}
         for line in puzzle_input.splitlines()
@@ -52,7 +52,7 @@ def _p0102(rotations: list[Rotation]) -> None:
 
 
 def day01() -> None:
-    rotations = _parse_puzzle_input0101(get_puzzle_input(1))
+    rotations = _parse_puzzle_input01(get_puzzle_input(1))
 
     _p0101(rotations)
     _p0102(rotations)
