@@ -2,11 +2,14 @@ import sys
 
 from aopy_2025.day01 import day01
 from aopy_2025.day02 import day02
+from aopy_2025.day03 import day03
 
 DAYS = {
     1: day01,
-    2: day02
+    2: day02,
+    3: day03,
 }
+
 
 def main() -> None:
     if len(sys.argv) < 2:

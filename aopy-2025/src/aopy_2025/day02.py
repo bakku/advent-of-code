@@ -10,7 +10,7 @@ class Range(TypedDict):
     end: int
 
 
-def _parse_puzzle_input02(puzzle_input: str) -> list[Range]:
+def _parse_puzzle_input(puzzle_input: str) -> list[Range]:
     return [
         {"start": int(range_.split("-")[0]), "end": int(range_.split("-")[1])}
         for range_ in puzzle_input.split(",")
@@ -50,7 +50,7 @@ def _get_invalid_ids(range_: Range, is_invalid_id: Callable[[int], bool]) -> lis
     ]
 
 
-def _p0201(ranges: list[Range]) -> None:
+def _part1(ranges: list[Range]) -> None:
     invalid_ids = flatten(
         [_get_invalid_ids(range_, _is_invalid_id1) for range_ in ranges]
     )
@@ -58,7 +58,7 @@ def _p0201(ranges: list[Range]) -> None:
     print(f"day 02 - part 01: {sum(invalid_ids)}")
 
 
-def _p0202(ranges: list[Range]) -> None:
+def _part2(ranges: list[Range]) -> None:
     invalid_ids = flatten(
         [_get_invalid_ids(range_, _is_invalid_id2) for range_ in ranges]
     )
@@ -67,6 +67,6 @@ def _p0202(ranges: list[Range]) -> None:
 
 
 def day02() -> None:
-    ranges = _parse_puzzle_input02(get_puzzle_input(2))
-    _p0201(ranges)
-    _p0202(ranges)
+    ranges = _parse_puzzle_input(get_puzzle_input(2))
+    _part1(ranges)
+    _part2(ranges)
