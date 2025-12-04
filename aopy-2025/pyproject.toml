@@ -7,7 +7,9 @@ authors = [
     { name = "Christian Paling", email = "christian.paling@googlemail.com" }
 ]
 requires-python = ">=3.14.0"
-dependencies = []
+dependencies = [
+    "numpy>=2.3.5",
+]
 
 [project.scripts]
 aopy-2025 = "aopy_2025:main"
