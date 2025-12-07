@@ -9,7 +9,9 @@ def _parse_puzzle_input(input_: str) -> NDArray[np.str_]:
 
 
 def _count_paper_rolls(grid: NDArray[np.str_]) -> int:
-    return np.sum(grid == "@")
+    result: int = np.sum(grid == "@")
+
+    return result
 
 
 def _get_removable_paper_roll_positions(
@@ -40,7 +42,7 @@ def _get_removable_paper_roll_positions(
     return positions
 
 
-def _part1(grid: NDArray[np.str_]):
+def _part1(grid: NDArray[np.str_]) -> None:
     print(f"day 04 - part 01: {len(_get_removable_paper_roll_positions(grid))}")
 
 
@@ -51,7 +53,7 @@ def _apply_removals(
         grid[row, col] = "x"
 
 
-def _part2(grid: NDArray[np.str_]):
+def _part2(grid: NDArray[np.str_]) -> None:
     amount_removes = 0
 
     while removable_positions := _get_removable_paper_roll_positions(grid):
