@@ -6,6 +6,7 @@ from aopy_2025.day03 import day03
 from aopy_2025.day04 import day04
 from aopy_2025.day05 import day05
 from aopy_2025.day06 import day06
+from aopy_2025.day07 import day07
 
 DAYS = {
     1: day01,
@@ -14,6 +15,7 @@ DAYS = {
     4: day04,
     5: day05,
     6: day06,
+    7: day07,
 }
 
 
